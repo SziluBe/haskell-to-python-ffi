@@ -1,0 +1,10 @@
+EXPORTS
+    hs_init                   @1
+    hs_exit                   @2
+    adder                     @3
+    getRandomNoState_export   @4
+    loadPicTest_export        @5
+    hello_export              @6
+    gameIterators_export      @7
+    testGameState_export      @8
+    pythonInputHandler_export @9

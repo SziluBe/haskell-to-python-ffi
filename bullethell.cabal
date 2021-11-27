@@ -1,0 +1,107 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: df7a4d9993099d26887f7c18da1bc8b297e1191dfe3317efcc1bc6f6e8a7a211
+
+name:           bullethell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/bullethell#readme>
+homepage:       https://github.com/githubuser/bullethell#readme
+bug-reports:    https://github.com/githubuser/bullethell/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/bullethell
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_bullethell
+  hs-source-dirs:
+      src
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , bytestring
+    , gloss
+    , random
+    , storable-endian
+    , template-haskell
+    , vector
+  default-language: Haskell2010
+
+executable bullethell-exe
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Paths_bullethell
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , bullethell
+    , bytestring
+    , gloss
+    , random
+    , storable-endian
+    , template-haskell
+    , vector
+    , msgpack
+  default-language: Haskell2010
+
+executable bullethell.dll
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Paths_bullethell
+  hs-source-dirs:
+      app
+  ghc-options: -shared -o bullethell.dll Main.def -pie
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , bullethell
+    , bytestring
+    , gloss
+    , random
+    , storable-endian
+    , template-haskell
+    , vector
+    , msgpack
+  default-language: Haskell2010
+
+test-suite bullethell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_bullethell
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyPixels
+    , base >=4.7 && <5
+    , bullethell
+    , bytestring
+    , gloss
+    , random
+    , storable-endian
+    , template-haskell
+    , vector
+    , msgpack
+  default-language: Haskell2010
